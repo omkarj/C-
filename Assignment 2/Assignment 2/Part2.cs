@@ -58,8 +58,7 @@ namespace Assignment_2
             {
                 Console.WriteLine("Invalid Input");
             }
-        }
-        
+        }      
     }
 
     class PrimeNumbers
@@ -200,6 +199,109 @@ namespace Assignment_2
                 int decimalNumber = Convert.ToInt32(s);
                 string binary = Convert.ToString(decimalNumber, 2);
                 Console.WriteLine("Binary value : {0}", binary);
+            }
+            catch
+            {
+                Console.WriteLine("Invalid Input");
+            }
+        }
+    }
+
+    class DiamondPattern
+    {
+        public void DiamondPatternPrinting()
+        {
+            try
+            {
+                int n = 5;
+                for (int i = 1; i <= n; i++)
+                {
+                    for (int j = 0; j < (n - i); j++)
+                    {
+                        Console.Write(" ");
+                    }
+
+                    for (int j = 1; j <= i; j++)
+                    {
+                        Console.Write("*");
+                    }
+                    for (int k = 1; k < i; k++)
+                    {
+                        Console.Write("*");
+                    }
+                    Console.WriteLine();
+                }
+
+                for (int i = n - 1; i >= 1; i--)
+                {
+                    for (int j = 0; j < (n - i); j++)
+                    {
+                        Console.Write(" ");
+                    }
+                    for (int j = 1; j <= i; j++)
+                    {
+                        Console.Write("*");
+                    }
+                    for (int k = 1; k < i; k++)
+                    {
+                        Console.Write("*");
+                    }
+                    Console.WriteLine();
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Invalid Input");
+            }
+        }
+
+    }
+
+    class PyramidPattern
+    {
+        public void NumberPatternPrinting()
+        {
+            try
+            {
+                Console.Write("Enter number of levels : ");
+                int levels = Convert.ToInt32(Console.ReadLine());
+                int  blanks, number;
+                for (int i = 1; i <= levels; i++)
+                {
+                    for (blanks = 1; blanks <= (levels - i); blanks++)
+                    {
+                        Console.Write(" ");
+                    }
+                    for (number = 1; number <= i; number++)
+                    {
+                        Console.Write(number);
+                    }
+                    for (number = (i - 1); number >= 1; number--)
+                    {
+                        Console.Write(number);
+                    }
+                    Console.WriteLine();
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Invalid Input");
+            }
+        }
+    }
+
+    class Cubes
+    {
+        public void PrintingCubes()
+        {
+            Console.WriteLine("Enter a digit : ");
+            try
+            {
+                int digit = Convert.ToInt32(Console.ReadLine());
+                for (int i = 1; i <= digit; i++)
+                {
+                    Console.WriteLine("Cube of  number {0} : {1}", i, (i * i * i));
+                }
             }
             catch
             {

@@ -58,10 +58,23 @@ namespace Assignment_2
             VowelConsonant d = new VowelConsonant();
             d.checkVowelConsonant();
             */
-
+            /*
             Binary d = new Binary();
             d.DecimalToBinary();
-            
+            */
+
+            /*
+            DiamondPattern d = new DiamondPattern();
+            d.DiamondPatternPrinting();
+            */
+
+            /*
+            PyramidPattern d = new PyramidPattern();
+            d.NumberPatternPrinting();
+            */
+
+            Cubes d = new Cubes();
+            d.PrintingCubes();
             Console.ReadKey();
         }
     }

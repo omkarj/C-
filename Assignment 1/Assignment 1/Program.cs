@@ -40,7 +40,7 @@ namespace Assignment_1
                 cn.Notify();
             }
             */
-
+            /*
             Console.WriteLine("Enter choice:\n 1.Developer \n 2. Admin \n 3. Tester");
             String input = Console.ReadLine();
             int choice = Convert.ToInt32(input);
@@ -64,7 +64,8 @@ namespace Assignment_1
                 d = new Tester();
                 d.display("Tester");
                 d.Salary();
-            }
+            }*/
+            Console.WriteLine("HI");
             Console.ReadKey();
         }
     }

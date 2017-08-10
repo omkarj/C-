@@ -19,8 +19,7 @@ namespace Assignment_2
                 levels--;
                 Console.WriteLine();          
             }
-        }
-        
+        }      
     }
 
     class Palindrome
