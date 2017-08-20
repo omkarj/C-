@@ -21,11 +21,11 @@ namespace Assignment_8
             //e.UpdateEmployeeCollection();
             //e.DeleteEmployeeRecord();
 
-            List<EmployeeGenericCollection> emp = new List<EmployeeGenericCollection>();
-            emp.Add(new EmployeeGenericCollection(700, "Anil", 5000));
-            emp.Add(new EmployeeGenericCollection(600, "Sunil", 6000));
-            emp.Add(new EmployeeGenericCollection(500, "Ram", 5000));
-            emp.Add(new EmployeeGenericCollection(400, "Shyam", 6000));
+            List<EmployeeGenericCollection> emp = new List<EmployeeGenericCollection>();    //Question 4
+            emp.Add(new EmployeeGenericCollection(700, "Anil", 6000));
+            emp.Add(new EmployeeGenericCollection(600, "Sunil",8000));
+            emp.Add(new EmployeeGenericCollection(500, "Ram", 9000));
+            emp.Add(new EmployeeGenericCollection(400, "Shyam", 5000));
 
             foreach (var e in emp)
             {
@@ -33,7 +33,7 @@ namespace Assignment_8
             }
 
             emp.Sort();
-            Console.WriteLine("\nAfter sorting based on Employee Code");
+            Console.WriteLine("\nAfter sorting based on Employee Code : ");
             foreach (var e in emp)
             {
                 Console.WriteLine(e.empCode + "," + e.name + "," + e.salary);
