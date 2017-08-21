@@ -6,40 +6,26 @@ using System.Threading.Tasks;
 
 namespace Assignment_8
 {
-    class EmployeeGenericCollection : IComparable<EmployeeGenericCollection>
+    public class EmployeeGenericCollection : IComparable<EmployeeGenericCollection>
     {
         public EmployeeGenericCollection(int empCode, string name, double salary)
         {
             this.empCode = empCode;
             this.name = name;
-            this.salary = salary; 
-        }
-
-        public EmployeeGenericCollection()
-        {
+            this.salary = salary;
         }
 
         public int empCode { get; set; }
         public string name { get; set; }
         public double salary { get; set; }
 
-        public  int CompareTo(EmployeeGenericCollection other)
+        public int CompareTo(EmployeeGenericCollection other)
         {
-            return empCode.CompareTo(other.empCode);
-
+            int result;
+            result = empCode.CompareTo(other.empCode);
+            //result = name.CompareTo(other.name);  
+            //result = salary.CompareTo(other.salary);    
+            return result;  
         }
-
-        /*
-        public int CompareToSalary(EmployeeGenericCollection other)
-        {
-            return salary.CompareTo(other.salary);
-        }
-
-        public int CompareToName(EmployeeGenericCollection other)
-        {
-            return name.CompareTo(other.name);
-        }
-        */
     }
-
 }
