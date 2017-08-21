@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Assignment_8
 {
-    static class CustomStringBuilder
+    class CustomStringBuilder
     {
-        public static void CustomAdd()
+        char[] sampleString = new char[1000];
+
+        public void CustomAppend(string inputString)
         {
 
         }
