@@ -8,21 +8,33 @@ namespace Assignment_7
 {
     class Program
     {
-        enum Days : short { Sat = 1, Sun, Mon, Tue, Wed, Thu, Fri };
+
         static void Main(string[] args)
         {
-            var PersonDetails = Tuple.Create("Mark", "J", "Smith");
-            Console.WriteLine(PersonDetails.Item1);
+            //GenericClassDemo<int> arrayOfInt = new GenericClassDemo<int>(8);
+            //GenericClassDemo<string> arrayOfString = new GenericClassDemo<string>(8);  
+            //int i;
+            //string s = "aaaaaaaaaaaaaaaaaaaaa";
+            //for (i = 0; i < 8; i++)                                                   //Generic Class Demo
+            //{
+            //    arrayOfInt.insertItem(i + 100, i);
+            //    arrayOfString.insertItem(s.Substring(0,i+1), i);
+            //}
+            //Console.WriteLine("Integer Item at index 4 : {0}", arrayOfInt.fetchItem(3));
+            //Console.WriteLine("String Item at index 5 : {0}", arrayOfString.fetchItem(4));
 
-            var EvenNos = new Tuple<int, int, int, int, int, int, int,Tuple<int>>
-                        (2, 4, 6, 8, 10, 12, 14,
-                        new Tuple<int>(16));
-            Console.WriteLine(EvenNos.Item1);
 
-          
+            //int i = 1, j = 2;
+            //string a = "aaa", b = "bbb";
 
-            Console.ReadLine();
+            //Console.WriteLine("Before swapping : \n i : {0} \n j : {1} \n a : {2} \n b : {3}", i, j, a, b);
+            //GenericMethodDemo.swappingVariables<int>(ref i, ref j);                     //Generic Method Demo
+            //GenericMethodDemo.swappingVariables<string>(ref a, ref b);
+            //Console.WriteLine("After swapping : \n i : {0} \n j : {1} \n a : {2} \n b : {3}", i, j, a, b);
 
+            GenericDelegateDemo g = new GenericDelegateDemo();
+            g.callDelegate();
+            Console.ReadKey();
         }
     }
 }

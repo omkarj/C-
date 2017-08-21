@@ -11,16 +11,6 @@ namespace Assignment_8
         static void Main(string[] args)
         {
 
-            //RegularExpression r = new RegularExpression();
-            //r.RegExForPhoneNumber();                                  //Question 1
-            //r.RegExForExtraWhiteSpaces();                             //Question 2
-
-            //Employee e = new Employee();
-            //e.AddEmployee();
-            //e.AddEmployee();                                          //Question 3
-            //e.UpdateEmployeeCollection();
-            //e.DeleteEmployeeRecord();
-
             List<EmployeeGenericCollection> emp = new List<EmployeeGenericCollection>();
             emp.Add(new EmployeeGenericCollection(700, "Anil", 5000));
             emp.Add(new EmployeeGenericCollection(600, "Sunil", 6000));
