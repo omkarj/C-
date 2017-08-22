@@ -6,13 +6,34 @@ using System.Threading.Tasks;
 
 namespace Assignment_8
 {
-    class CustomStringBuilder
+    public class CustomStringBuilder<T> 
     {
-        char[] sampleString = new char[1000];
-
-        public void CustomAppend(string inputString)
+        private T[] arrayOfElements;
+        private int i;
+        public CustomStringBuilder()
         {
+            arrayOfElements = new T[1000];
+            i = 0;
+        }
 
+        public void CustomAppend(T element)
+        {
+            arrayOfElements[i] = element;
+            i++;
+        }
+
+        public void CustomRemove()
+        {
+            i--;
+            arrayOfElements[i] = default(T);
+        }
+
+        public void CustomDisplay()
+        {
+            foreach (var v in arrayOfElements)
+            {
+                Console.Write(v);
+            }
         }
     }
 }

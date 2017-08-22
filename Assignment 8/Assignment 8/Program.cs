@@ -21,24 +21,54 @@ namespace Assignment_8
             //e.UpdateEmployeeCollection();
             //e.DeleteEmployeeRecord();
 
-            List<EmployeeGenericCollection> emp = new List<EmployeeGenericCollection>();    //Question 4
-            emp.Add(new EmployeeGenericCollection(700, "Anil", 6000));
-            emp.Add(new EmployeeGenericCollection(600, "Sunil",8000));
-            emp.Add(new EmployeeGenericCollection(500, "Ram", 9000));
-            emp.Add(new EmployeeGenericCollection(400, "Shyam", 5000));
+            CustomStringBuilder<string> sb = new CustomStringBuilder<string>();
 
-            foreach (var e in emp)
-            {
-                Console.WriteLine(e.empCode + "," +  e.name + "," + e.salary);
-            }
+            Console.WriteLine("String Appending : ");
+            sb.CustomAppend("Hello");
+            sb.CustomDisplay();
+            Console.WriteLine();
+            sb.CustomAppend("Hi");
+            sb.CustomDisplay();
+            Console.WriteLine();
+            sb.CustomAppend("Bye");
+            sb.CustomDisplay();
 
-            emp.Sort();
-            Console.WriteLine("\nAfter sorting based on Employee Code : ");
-            foreach (var e in emp)
-            {
-                Console.WriteLine(e.empCode + "," + e.name + "," + e.salary);
-            }
-            
+            Console.WriteLine("\n\nDeleting : ");
+            sb.CustomRemove();
+            sb.CustomDisplay();
+
+            //List<EmployeeGenericCollection> emp = new List<EmployeeGenericCollection>();    //Question 5
+            //emp.Add(new EmployeeGenericCollection(700, "Anil", 6000));
+            //emp.Add(new EmployeeGenericCollection(600, "Sunil",8000));
+            //emp.Add(new EmployeeGenericCollection(500, "Ram", 9000));
+            //emp.Add(new EmployeeGenericCollection(400, "Shyam", 5000));
+
+            //foreach (var e in emp)
+            //{
+            //    Console.WriteLine(e.empCode + "," +  e.name + "," + e.salary);
+            //}
+
+            //emp.Sort();
+            //Console.WriteLine("\nAfter sorting based on Employee Code : ");
+            //foreach (var e in emp)
+            //{
+            //    Console.WriteLine(e.empCode + "," + e.name + "," + e.salary);
+            //}
+
+            //Console.WriteLine("\nAfter sorting based on Employee Code and Employee Name respectively : ");
+            //emp.Sort(new SortByName());
+            //foreach (var e in emp)
+            //{
+            //    Console.WriteLine(e.empCode + "," + e.name + "," + e.salary);
+            //}
+
+            //Console.WriteLine("\nAfter sorting based on Employee Code, Employee Name and Employee Salary respectively: ");
+            //emp.Sort(new SortBySalary());
+            //foreach (var e in emp)
+            //{
+            //    Console.WriteLine(e.empCode + "," + e.name + "," + e.salary);
+            //}
+
             Console.ReadKey();
         }
     }

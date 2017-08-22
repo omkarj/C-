@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,22 @@ namespace Assignment_8
             //result = name.CompareTo(other.name);  
             //result = salary.CompareTo(other.salary);    
             return result;  
+        }
+    }
+
+    public class SortByName : IComparer<EmployeeGenericCollection>
+    {
+        public int Compare(EmployeeGenericCollection x, EmployeeGenericCollection y)
+        {
+            return x.name.CompareTo(y.name);
+        }
+    }
+
+    public class SortBySalary : IComparer<EmployeeGenericCollection>
+    {
+        public int Compare(EmployeeGenericCollection x, EmployeeGenericCollection y)
+        {
+            return x.salary.CompareTo(y.salary);
         }
     }
 }
