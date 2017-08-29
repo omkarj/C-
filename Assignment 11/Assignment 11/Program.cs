@@ -29,7 +29,17 @@ namespace Assignment_11
             //s.SynchronizationUsingSemaphore();
 
             DivideExample d = new DivideExample();
-            d.DivideExampleCall();
+            Thread[] threads = new Thread[3];
+            for (int i = 0; i < 3; i++)
+            {
+                Thread t = new Thread(new ThreadStart(d.DivideExampleCall));
+                threads[i] = t;
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                threads[i].Start();
+            }
+            Console.ReadKey();
         }
     }
 }
