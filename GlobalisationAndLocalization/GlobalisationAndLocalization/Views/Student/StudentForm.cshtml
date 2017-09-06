@@ -1,0 +1,38 @@
+﻿@model GlobalisationAndLocalization.Models.Student
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Student Form</h2>
+
+@using (Html.BeginForm("AfterSubmit","Student"))
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RollNo)
+        </div>
+        <div class="editor-label">
+            @Html.EditorFor(model => model.RollNo)
+            @Html.ValidationMessageFor(model => model.RollNo)
+        </div>
+        <br>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-label">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+        <br>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </fieldset>
+
+
+}
+
